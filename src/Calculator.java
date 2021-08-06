@@ -51,7 +51,9 @@ public class Calculator extends JFrame {
         equalButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calculate();
+                char lastTextFieldChar = textField.getText().charAt(textField.getText().length()-1);
+                if (lastTextFieldChar >= '0'&& lastTextFieldChar<='9')
+                    calculate();
             }
         });
         panel.add(equalButton);
